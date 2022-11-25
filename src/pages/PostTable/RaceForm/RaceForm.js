@@ -332,16 +332,7 @@ const RaceForm = () => {
 
   const onSelectFile = (e) => {
     setImage(e.target.files[0]);
-    
-
-
-(image, "image");
   };
-
-  
-
-
-(jockey, "jockey");
   return (
     <>
       <div className="page">

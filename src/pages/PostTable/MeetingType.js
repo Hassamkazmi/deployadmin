@@ -14,9 +14,6 @@ const MeetingType = () => {
   const history =useNavigate()
   const { pathname } = useLocation();
   
-
-
-(pathname)
     const submit = async (event) => {
       event.preventDefault();
       try {

@@ -76,9 +76,6 @@ const AdsForm = () => {
     
       setImage(e.target.files[0])
     
-
-
-(image,'image')
   
     }
 

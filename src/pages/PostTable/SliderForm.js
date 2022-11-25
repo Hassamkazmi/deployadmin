@@ -53,10 +53,6 @@ const SliderForm = () => {
 
   const onSelectFile = (e) => {
     setImage(e.target.files[0]);
-    
-
-
-(image, "image");
   };
   const isSubmitData = TitleAr === "" || TitleEn === "";
   return (

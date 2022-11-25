@@ -50,9 +50,6 @@ const NewsForm = () => {
     event.preventDefault();
     try {
       
-
-
-(state1.NameEn)
       const formData = new FormData();
       formData.append("image", image);
       formData.append("NameEn", state1.NameEn);

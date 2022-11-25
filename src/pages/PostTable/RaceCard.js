@@ -43,10 +43,6 @@ const Nationality = () => {
     setFetchData(response);
   }
 
-  // function FetchRaces(){
-  //   const response = axios.post(`http://3.90.189.40:4000/api/v1/getracesthroughracecourseandtime/${Race}/${'2022-11-24T11:19:15.000Z}`);
-  //   setFetchData(response);
-  // }
   return (
     <div className="page">
       <div className="rightsidedata">

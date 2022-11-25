@@ -187,10 +187,7 @@ const HorseForm = () => {
   //   };
   // });
 
-  
 
-
-(trainer, "trainer");
   const [ActiveOwner, setActiveOwner] = useState("");
   // const [Jockey, setJockey] = useState("");
   const [Age, setAge] = useState("");
@@ -291,16 +288,10 @@ const HorseForm = () => {
     return () => URL.revokeObjectURL(objectUrl);
   }, [image]);
   
-
-
-(color, "color");
   const onSelectFile = (e) => {
     // I've kept this example simple by using the first image instead of multiple
     setimage(e.target.files[0]);
-    
-
-
-(image, "image");
+  
   };
   const isSubmitData =
     // ActiveOwner === "" ||
@@ -353,20 +344,10 @@ const HorseForm = () => {
       months[date.getMonth()] +
       ", " +
       date.getFullYear();
-
-    
-
-
-(delDateString);
-
     return delDateString;
   };
 
   const DateMax =   new Date();
-  
-
-
-(STARS,'Starts')
   return (
     <Fragment>
       <div className="page">

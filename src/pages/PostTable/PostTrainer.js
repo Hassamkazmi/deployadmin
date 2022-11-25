@@ -63,16 +63,9 @@ const TrainerForm = () => {
         icon: "success",
         button: "OK",
       });
-      
-
-
-(formData,'NameEn')
       history("/trainer");
     } catch (error) {
-      
-
-
-(error,'NameEn')
+    
       const err = error.response.data.message;
       swal({
         title: "Error!",
@@ -92,10 +85,6 @@ const TrainerForm = () => {
      ];
      var days = ["اﻷحد", "اﻷثنين", "الثلاثاء", "اﻷربعاء", "الخميس", "الجمعة", "السبت"];
      var delDateString = days[date.getDay()] +  " " + date.getDate() + " " + months[date.getMonth()] + " " + date.getFullYear();
-     
-
-
-(delDateString);
      return delDateString;
     }
     
@@ -117,10 +106,6 @@ const TrainerForm = () => {
 
   const onSelectFile = (e) => {
     setImage(e.target.files[0]);
-    
-
-
-(image, "image");
   };
 
   let AllNationality = nationality === undefined ? <></> : nationality.map(function (item) {

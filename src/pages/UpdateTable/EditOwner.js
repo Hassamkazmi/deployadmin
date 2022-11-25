@@ -40,6 +40,7 @@ const EditOwnerForm = () => {
       alert(error.message);
     }
   };
+  
   return (
     <>
       <div className="page">
