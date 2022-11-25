@@ -67,10 +67,7 @@ const Racecourse = () => {
       </h2>
     );
   }
-  
-
-
-(racecourse,'dad')
+  console.log(racecourse,'dad')
   return (
     <>
       <div className="page">
@@ -135,20 +132,20 @@ const Racecourse = () => {
                             </td>
 
                             <td className="table_delete_btn1">
-                            {/* <BiEdit   onClick={() => navigate('/editracecourse',{
+                            <BiEdit   onClick={() => navigate('/editracecourse',{
                                 state:{
                                   courseid:item._id
                                 }
-                              })}/> */}
+                              })}/>
                               {/* <Link to={`/editracecourse/${item._Id}`}>
                                 <BiEdit />
                               </Link> */}
-                              <MdDelete
+                              {/* <MdDelete
                                 style={{
                                   fontSize: "22px",
                                 }}
-                                // onClick={() => handleRemove(item._id)}
-                              />
+                                onClick={() => handleRemove(item._id)}
+                              /> */}
                             </td>
                           </tr>
                         </>

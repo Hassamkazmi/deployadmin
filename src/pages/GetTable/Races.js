@@ -17,10 +17,7 @@ import Lottie from "lottie-react";
 import HorseAnimation from "../../assets/horselottie.json";
 
 const Prize = (data) => {
-  
-
-
-(data, "FifthPrice");
+  console.log(data, "FifthPrice");
   return (
     <>
       <table className="Prizeclass">
@@ -120,10 +117,7 @@ const Races = () => {
       </h2>
     );
   }
-  
 
-
-(race)
   return (
     <>
       <div className="page">

@@ -4,9 +4,7 @@ import React from "react";
 
 const AdsPopup = (data) => {
 
-    
-
-
+    console.log(data,'data')
 
     return (
         <>

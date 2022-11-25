@@ -67,7 +67,7 @@ const OwnerForm = () => {
      ];
      var days = ["اﻷحد", "اﻷثنين", "الثلاثاء", "اﻷربعاء", "الخميس", "الجمعة", "السبت"];
      var delDateString = days[date.getDay()] +  " " + date.getDate() + " " + months[date.getMonth()] + " " + date.getFullYear();
-     
+     console.log(delDateString);
      return delDateString;
     }
     
@@ -92,11 +92,10 @@ const OwnerForm = () => {
     formData.append("image", image);
     // image.forEach((image) => {
     // formData.append("image", image);
-    // 
-
+    // console.log('dasad',image)
     // });
     try {
-      await axios.post(`http://3.90.189.40:4000/api/v1/createowner`,formData);
+      await axios.post(`${window.env.API_URL}/createowner`,formData);
       swal({
         title: "Success!",
         text: 'Data has been added successfully',
@@ -105,7 +104,7 @@ const OwnerForm = () => {
       });
       history("/owner");
     } catch (error) {
-      
+      console.log(error.response.data.message, "error");
       const err = error.response.data.message;
       swal({
         title: "Error!",
@@ -147,7 +146,7 @@ const OwnerForm = () => {
       };
       reader.readAsDataURL(file);
     });
-    
+    console.log(files)
   };
 
   return (

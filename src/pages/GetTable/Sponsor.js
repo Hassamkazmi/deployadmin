@@ -131,7 +131,7 @@ const News = () => {
                               }} />
                             </td>
                             <td className="table_delete_btn1" style={{textAlign: 'center'}}>
-                            {/* <Link to ={`/editsponsor/${item._Id}`}      ><BiEdit /></Link>  */}
+                            <Link to ={`/editsponsor/${item._Id}`}      ><BiEdit /></Link> 
                           
                               <MdDelete
                               

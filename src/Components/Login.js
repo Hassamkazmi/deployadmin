@@ -31,11 +31,11 @@ const Login = () => {
 
   const submitForm = (data) => {
     dispatch(userLogin(data))  
-    toast(error || customError)
+    toast(error)
   }
 
   // const AllFilled = (register.Email !== '') && (register.password !== "")
-  // 
+  // console.log(AllFilled,'register')
   return (
     <div className='mainlogin'>
     <div className='loginheader'>

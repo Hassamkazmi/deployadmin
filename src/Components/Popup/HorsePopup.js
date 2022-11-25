@@ -4,9 +4,7 @@ import React from "react";
 
 const HorsePopup = (data) => {
 
-    
-
-
+    console.log(data,'data')
 
     return (
         <>

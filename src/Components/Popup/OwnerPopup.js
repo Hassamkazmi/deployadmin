@@ -4,8 +4,7 @@ import React from "react";
 
 const OwnerPopup = (data) => {
 
-    
-
+    console.log(data,'data')
 
     return (
         <>

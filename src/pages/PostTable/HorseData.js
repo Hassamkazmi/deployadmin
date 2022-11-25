@@ -15,10 +15,7 @@ function HorseData() {
    Weather,
    RaceStatus} = state;
 
-   
-
-
-(RaceKind,raceName,Description,'DescriptionDescription')
+   console.log(RaceKind,raceName,Description,'DescriptionDescription')
   return (
     <div className="HorseData">
       

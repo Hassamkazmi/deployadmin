@@ -28,9 +28,7 @@ const RaceCourseForm = () => {
   const { data: trackLength } = useSelector((state) => state.trackLength);
   const { data: singleracecourse } = useSelector((state) => state.singleracecourse);
 
-  
-
-
+  console.log(singleracecourse,'race course')
   let AllNationality =
     nationality === undefined ? (
       <></>
@@ -99,6 +97,8 @@ const RaceCourseForm = () => {
 
     const objectUrl = URL.createObjectURL(image);
     setPreview(objectUrl);
+
+    // free memory when ever this component is unmounted
     return () => URL.revokeObjectURL(objectUrl);
   }, [image]);
   useEffect(() => {
@@ -124,7 +124,7 @@ const RaceCourseForm = () => {
       formData.append("NationalityId", NationalityId.id);
       formData.append("shortCode", state1.shortCode);
       const response = await axios.post(
-        `http://3.90.189.40:4000/api/v1/createcourse?keyword=&page=`,
+        `${window.env.API_URL}/createcourse?keyword=&page=`,
         formData
       );
       swal({
@@ -135,9 +135,11 @@ const RaceCourseForm = () => {
       });
       history("/racecourse");
     } catch (error) {
-      
+      console.log(error.response.data.message, "error");
+      const err = error.response.data.message;
       swal({
         title: "Error!",
+        text: err,
         icon: "error",
         button: "OK",
       });
@@ -146,6 +148,7 @@ const RaceCourseForm = () => {
 
   const onSelectFile = (e) => {
     setImage(e.target.files[0]);
+    console.log(image, "image");
   };
 
   const handleClose = () => setShow(false);

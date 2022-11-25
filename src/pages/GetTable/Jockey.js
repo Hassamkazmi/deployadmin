@@ -155,7 +155,7 @@ const Statistic = () => {
                               })}>
                                   <BiEdit />
                                 <MdDelete
-                                  // onClick={() => handleRemove(item._id)}
+                                  onClick={() => handleRemove(item._id)}
                                 />
                               </td>
                             </tr>

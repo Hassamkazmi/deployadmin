@@ -187,7 +187,7 @@ const HorseForm = () => {
   //   };
   // });
 
-
+  console.log(trainer, "trainer");
   const [ActiveOwner, setActiveOwner] = useState("");
   // const [Jockey, setJockey] = useState("");
   const [Age, setAge] = useState("");
@@ -255,7 +255,7 @@ const HorseForm = () => {
       formData.append("CreationId", NationalityId.id);
       formData.append("PurchasePrice", PurchasePrice);
       const response = await axios.post(
-        `http://3.90.189.40:4000/api/v1createhorse?keyword=&page=`,
+        `${window.env.API_URL}createhorse?keyword=&page=`,
         formData
       );
       swal({
@@ -287,11 +287,11 @@ const HorseForm = () => {
     // free memory when ever this component is unmounted
     return () => URL.revokeObjectURL(objectUrl);
   }, [image]);
-  
+  console.log(color, "color");
   const onSelectFile = (e) => {
     // I've kept this example simple by using the first image instead of multiple
     setimage(e.target.files[0]);
-  
+    console.log(image, "image");
   };
   const isSubmitData =
     // ActiveOwner === "" ||
@@ -344,10 +344,14 @@ const HorseForm = () => {
       months[date.getMonth()] +
       ", " +
       date.getFullYear();
+
+    console.log(delDateString);
+
     return delDateString;
   };
 
   const DateMax =   new Date();
+  console.log(STARS,'Starts')
   return (
     <Fragment>
       <div className="page">

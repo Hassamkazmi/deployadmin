@@ -102,11 +102,8 @@ const ItemLength = items.length;
   const submit = async (event) => {
     event.preventDefault();
     try {
-      
-
-
-(items, "HorseEntry");
-      const response = await axios.post(`http://3.90.189.40:4000/api/v1addracehorses/${RaceId}`, {HorseEntry:items});
+      console.log(items, "HorseEntry");
+      const response = await axios.post(`${window.env.API_URL}addracehorses/${RaceId}`, {HorseEntry:items});
       history("/fullpublishrace", {
         state: {
           RaceId: RaceId
@@ -237,7 +234,7 @@ const ItemLength = items.length;
                     className="SubmitButton"
                     type="submit"
                     onClick={submit}
-                   
+                    disabled={items.length === horse.length }
                   >
                     Save & Add Horses
                   </button>

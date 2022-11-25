@@ -118,7 +118,7 @@ const Slider = () => {
                     <tr>
                       <th>Title</th>
                       <th>Title Arabic </th>
-                      <th>Url</th>
+
                       <th>Image</th>
                       <th>Action</th>
                     </tr>
@@ -131,13 +131,13 @@ const Slider = () => {
                             <td>{item.TitleEn}</td>
 
                             <td>{item.TitleAr}</td>
-                            <td>{item.Url}</td>
+
                             <td>
                               <img src={item.image} alt="" />
                             </td>
 
                             <td>
-                              {/* <BiEdit
+                              <BiEdit
                                 onClick={() =>
                                   history("/editslider", {
                                     state: {
@@ -145,9 +145,9 @@ const Slider = () => {
                                     },
                                   })
                                 }
-                              /> */}
+                              />
                               <MdDelete
-                                // onClick={() => handleRemove(item._id)}
+                                onClick={() => handleRemove(item._id)}
                               />
                             </td>
                           </tr>

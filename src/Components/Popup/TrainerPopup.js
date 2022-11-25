@@ -6,6 +6,7 @@ import '../CSS/modal.css'
 
 const TrainerPopup = (data) => {
 
+console.log(data)
     return (
       <div  >
       <div >

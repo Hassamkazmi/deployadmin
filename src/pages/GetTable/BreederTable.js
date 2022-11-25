@@ -58,10 +58,7 @@ const BreederTable = () => {
       );
     }
 
-   
-
-
-(breeder,'breederbreeder')
+   console.log(breeder,'breederbreeder')
   return (
     <Fragment>
 
@@ -130,12 +127,10 @@ const BreederTable = () => {
     
                               
                                 <td className="table_delete_btn1">
-                           {/* <Link to={`/editjockey/${item._id}`}> <BiEdit /></Link>  */}
+                           <Link to={`/editjockey/${item._id}`}> <BiEdit /></Link> 
                                   <MdDelete
-                                    style={{
-                                      fontSize: "22px",
-                                    }}
-                                    // onClick={() => handleRemove(item._id)}
+                                    
+                                    onClick={() => handleRemove(item._id)}
                                   />
                              
                                 </td>

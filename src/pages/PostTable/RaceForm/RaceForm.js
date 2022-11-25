@@ -295,7 +295,7 @@ const RaceForm = () => {
       formData.append("ActiveJockeyForTheRace", ActiveJockeyForTheRace.id);
       formData.append("image", image);
       const response = await axios.post(
-        `http://3.90.189.40:4000/api/v1/createrace`,
+        `${window.env.API_URL}/createrace`,
         formData
       );
       swal({
@@ -332,7 +332,10 @@ const RaceForm = () => {
 
   const onSelectFile = (e) => {
     setImage(e.target.files[0]);
+    console.log(image, "image");
   };
+
+  console.log(jockey, "jockey");
   return (
     <>
       <div className="page">

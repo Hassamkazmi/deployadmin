@@ -14,7 +14,7 @@ import { fetchResult ,STATUSES } from "../../../redux/getReducer/getResultSlice"
 import Lottie from "lottie-react";
 import HorseAnimation from "../../../assets/horselottie.json";
 const Races = () => {
-
+console.log(Math.max)
   const [show, setShow] = useState(false);
   const [modaldata, setmodaldata] = useState();
   const handleClose = () => setShow(false);
@@ -43,7 +43,7 @@ const Races = () => {
   useEffect(() => {
     dispatch(fetchResult());
   }, []);
-  
+  console.log(Result, "race");
   if (status === STATUSES.LOADING) {
         return <Lottie animationData={HorseAnimation} loop={true}  className='Lottie'/>
 

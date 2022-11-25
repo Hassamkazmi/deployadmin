@@ -59,6 +59,8 @@ const Trainer = () => {
   }, []);
   
     const handlePageClick = async (data) => {
+    console.log(data.selected);
+
     let currentPage = data.selected + 1;
 
     // const commentsFormServer = await fetchComments(currentPage);
@@ -86,6 +88,9 @@ const Trainer = () => {
   }
   const dob = new Date().toLocaleString()
   const age =' 2022-11-14T00:00:00.000Z'
+  console.log(trainer,'trainer data');
+  console.log(dob,'age data')
+
 
   return (
    <>

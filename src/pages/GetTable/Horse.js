@@ -38,10 +38,7 @@ const Horse = () => {
   useEffect(() => {
     dispatch(fetchHorse({ pagenumber }));
   }, [dispatch]);
-  
-
-
-(horse);
+  console.log(horse);
   const handleRemove = (Id) => {
     swal({
       title: "Are you sure?",
@@ -190,10 +187,8 @@ const Horse = () => {
                                 }}></img>
                               </td>
                               <td>
-                                {/* <BiEdit /> */}
-                                <MdDelete style={{
-                                  fontSize: "22px",
-                                }}/>
+                                <BiEdit />
+                                <MdDelete onClick={handleRemove} />
                          
 
                               </td>

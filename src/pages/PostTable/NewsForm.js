@@ -32,7 +32,7 @@ const NewsForm = () => {
       formData.append("DescriptionAr", DescriptionAr);
       formData.append("DescriptionEn", DescriptionEn);
       const response = await axios.post(
-        `http://3.90.189.40:4000/api/v1/uploadnews?keyword=&page=`,
+        `${window.env.API_URL}/uploadnews?keyword=&page=`,
         formData
       );
       swal({
@@ -67,6 +67,7 @@ const NewsForm = () => {
 
   const onSelectFile = (e) => {
     setImage(e.target.files[0]);
+    console.log(image, "image");
   };
   const isSubmitData =
     TitleAr === "" ||

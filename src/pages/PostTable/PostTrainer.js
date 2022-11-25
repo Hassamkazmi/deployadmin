@@ -55,7 +55,7 @@ const TrainerForm = () => {
       formData.append("TrainerLicenseDate", TrainerLicenseDate);
       formData.append("ShortNameEn", ShortNameEn);
       formData.append("ShortNameAr", ShortNameAr);
-    await axios.post(`http://3.90.189.40:4000/api/v1/uploadtrainer?keyword=&page=`,formData);
+    await axios.post(`${window.env.API_URL}/uploadtrainer?keyword=&page=`,formData);
       
       swal({
         title: "success!",
@@ -63,9 +63,10 @@ const TrainerForm = () => {
         icon: "success",
         button: "OK",
       });
+      console.log(formData,'NameEn')
       history("/trainer");
     } catch (error) {
-    
+      console.log(error,'NameEn')
       const err = error.response.data.message;
       swal({
         title: "Error!",
@@ -85,6 +86,7 @@ const TrainerForm = () => {
      ];
      var days = ["اﻷحد", "اﻷثنين", "الثلاثاء", "اﻷربعاء", "الخميس", "الجمعة", "السبت"];
      var delDateString = days[date.getDay()] +  " " + date.getDate() + " " + months[date.getMonth()] + " " + date.getFullYear();
+     console.log(delDateString);
      return delDateString;
     }
     
@@ -106,6 +108,7 @@ const TrainerForm = () => {
 
   const onSelectFile = (e) => {
     setImage(e.target.files[0]);
+    console.log(image, "image");
   };
 
   let AllNationality = nationality === undefined ? <></> : nationality.map(function (item) {

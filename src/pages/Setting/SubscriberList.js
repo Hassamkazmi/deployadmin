@@ -6,8 +6,6 @@ import ScrollContainer from "react-indiana-drag-scroll";
 import Moment from "react-moment";
 import swal from 'sweetalert';
 import axios from "axios";
-import Lottie from "lottie-react";
-import HorseAnimation from "../../assets/horselottie.json";
 
 const SubscriberList = () => {
   const dispatch = useDispatch();
@@ -48,7 +46,7 @@ const SubscriberList = () => {
           swal("Poof! User has been Approved!", {
             icon: "success",
           });
-           axios.put(`http://3.90.189.40:4000/api/v1/ChangeStatus/${Id}`);
+           axios.put(`${window.env.API_URL}/ChangeStatus/${Id}`);
         } else {
           swal("Not Approved");
         }

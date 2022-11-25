@@ -31,7 +31,7 @@ const EquiptmentTable = () => {
           swal(" Your imaginary file has been deleted!", {
             icon: "success",
           });
-          const response = axios.delete(`http://3.90.189.40:4000/api/v1deleteEquipment/${Id}`);
+          const response = axios.delete(`${window.env.API_URL}deleteEquipment/${Id}`);
           history("/equipmentlist");
         } else {
           swal("Your imaginary file is safe!");
@@ -58,10 +58,7 @@ const EquiptmentTable = () => {
       );
     }
 
-   
-
-
-(equipment,'breederbreeder')
+   console.log(equipment,'breederbreeder')
 
   return (
     <Fragment>
@@ -125,10 +122,8 @@ const EquiptmentTable = () => {
                                 <td className="table_delete_btn1">
                            {/* <Link to={`/editjockey/${item._id}`}> <BiEdit /></Link>  */}
                                   <MdDelete
-                                    style={{
-                                      fontSize: "22px",
-                                    }}
-                                    // onClick={() => handleRemove(item._id)}
+                                    
+                                    onClick={() => handleRemove(item._id)}
                                   />
                              
                                 </td>

@@ -50,10 +50,7 @@ const Owner = () => {
   }
 
 
-
-
-
-(owner)
+console.log(owner)
 
   return (
     <>
@@ -126,16 +123,14 @@ const Owner = () => {
                          <td>
                            <img src={item.image} alt="" />
                          </td>
-                        <td style={{textAlign: 'center'}}><MdDelete style={{
-                                  fontSize: "22px",
-                                }}/>
+                        <td style={{textAlign: 'center'}}><MdDelete/>
                         
                        
-                         {/* <BiEdit onClick={() => navigate('/editowner',{
+                         <BiEdit onClick={() => navigate('/editowner',{
                                 state:{
                                   ownerid:item._id
                                 }
-                              })}/> */}
+                              })}/>
                         
                         </td>
                        </tr>

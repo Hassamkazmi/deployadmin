@@ -4,9 +4,7 @@ import React from "react";
 
 const NewsPopup = (data) => {
 
-    
-
-
+    console.log(data,'data')
 
     return (
         <>

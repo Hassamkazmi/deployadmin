@@ -48,11 +48,6 @@ const Ads = () => {
       </h2>
     );
   }
-
-  
-
-
-(allads,'allads')
   return (
     <>
       <div className="page">
@@ -89,6 +84,8 @@ const Ads = () => {
                   <thead>
                     <tr>
                       <th>Title </th>
+
+
                       <th>Title Arabic</th>
                       <th>Description </th>
                       <th>Description Arabic</th>
@@ -101,6 +98,8 @@ const Ads = () => {
                       return (
                         <>
                           <tr className="tr_table_class">
+
+
                             <td>{item.TitleEn}</td>
                             <td>{item.TitleAr}</td>
                             <td>{item.DescriptionEn}</td>
@@ -114,12 +113,9 @@ const Ads = () => {
                                   jockeyid:item._id
                                 }
                               })}>
-                                  {/* <BiEdit /> */}
+                                  <BiEdit />
                                 <MdDelete
-                                style={{
-                                  fontSize: "22px",
-                                }}
-                                  // onClick={() => handleRemove(item._id)}
+                                  onClick={() => handleRemove(item._id)}
                                 />
                               </td>
                           
