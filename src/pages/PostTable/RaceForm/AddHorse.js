@@ -106,7 +106,7 @@ const ItemLength = items.length;
 
 
 (items, "HorseEntry");
-      const response = await axios.post(`${window.env.API_URL}addracehorses/${RaceId}`, {HorseEntry:items});
+      const response = await axios.post(`http://3.90.189.40:4000/api/v1addracehorses/${RaceId}`, {HorseEntry:items});
       history("/fullpublishrace", {
         state: {
           RaceId: RaceId

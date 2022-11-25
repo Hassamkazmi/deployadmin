@@ -58,7 +58,7 @@ const NewsForm = () => {
       formData.append("MiniumumJockeyWeight", state1.MiniumumJockeyWeight);
 
       const response = await axios.put(
-        `${window.env.API_URL}/updateJockey/${jockeyid}`,
+        `http://3.90.189.40:4000/api/v1/updateJockey/${jockeyid}`,
         formData
       );
       history("/jockey");

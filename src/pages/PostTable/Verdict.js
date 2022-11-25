@@ -73,11 +73,11 @@ const Verdict = () => {
     event.preventDefault();
     try {
       const response = await axios.post(
-        `${window.env.API_URL}addverdicts/${RaceId}`,
+        `http://3.90.189.40:4000/api/v1addverdicts/${RaceId}`,
         { VerdictEntry: items }
       );
       const response1 = await axios.put(
-        `${window.env.API_URL}/publishrace/${RaceId}`
+        `http://3.90.189.40:4000/api/v1/publishrace/${RaceId}`
       );
       history("/publishrace", {
         state: {

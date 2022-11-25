@@ -258,7 +258,7 @@ const HorseForm = () => {
       formData.append("CreationId", NationalityId.id);
       formData.append("PurchasePrice", PurchasePrice);
       const response = await axios.post(
-        `${window.env.API_URL}createhorse?keyword=&page=`,
+        `http://3.90.189.40:4000/api/v1createhorse?keyword=&page=`,
         formData
       );
       swal({

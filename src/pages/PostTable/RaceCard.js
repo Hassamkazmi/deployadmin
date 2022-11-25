@@ -39,12 +39,12 @@ const Nationality = () => {
   }, []);
   const submit = async (event) => {
     event.preventDefault();
-        const response = axios.post(`${window.env.API_URL}/getracesthroughracecourseandtime/${Race.id}/${FormaredDate}`);
+        const response = axios.post(`http://3.90.189.40:4000/api/v1/getracesthroughracecourseandtime/${Race.id}/${FormaredDate}`);
     setFetchData(response);
   }
 
   // function FetchRaces(){
-  //   const response = axios.post(`${window.env.API_URL}/getracesthroughracecourseandtime/${Race}/${'2022-11-24T11:19:15.000Z}`);
+  //   const response = axios.post(`http://3.90.189.40:4000/api/v1/getracesthroughracecourseandtime/${Race}/${'2022-11-24T11:19:15.000Z}`);
   //   setFetchData(response);
   // }
   return (

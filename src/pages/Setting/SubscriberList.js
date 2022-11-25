@@ -48,7 +48,7 @@ const SubscriberList = () => {
           swal("Poof! User has been Approved!", {
             icon: "success",
           });
-           axios.put(`${window.env.API_URL}/ChangeStatus/${Id}`);
+           axios.put(`http://3.90.189.40:4000/api/v1/ChangeStatus/${Id}`);
         } else {
           swal("Not Approved");
         }

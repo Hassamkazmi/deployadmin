@@ -295,7 +295,7 @@ const RaceForm = () => {
       formData.append("ActiveJockeyForTheRace", ActiveJockeyForTheRace.id);
       formData.append("image", image);
       const response = await axios.post(
-        `${window.env.API_URL}/createrace`,
+        `http://3.90.189.40:4000/api/v1/createrace`,
         formData
       );
       swal({
