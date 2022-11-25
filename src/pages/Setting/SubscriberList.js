@@ -6,6 +6,8 @@ import ScrollContainer from "react-indiana-drag-scroll";
 import Moment from "react-moment";
 import swal from 'sweetalert';
 import axios from "axios";
+import Lottie from "lottie-react";
+import HorseAnimation from "../../assets/horselottie.json";
 
 const SubscriberList = () => {
   const dispatch = useDispatch();
